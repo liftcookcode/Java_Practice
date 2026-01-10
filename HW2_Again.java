@@ -35,44 +35,44 @@ public class HW2_Again {
     // =================
     // CODE STARTS HERE:
     // =================
-    public static void main(String[] args) {
+    // public static void main(String[] args) {
 
-    Scanner input = new Scanner(System.in);
+    // Scanner input = new Scanner(System.in);
 
-    System.out.print("Enter values for a,b,c:");
-    int a = input.nextInt();
-    int b = input.nextInt();
-    int c = input.nextInt();
+    // System.out.print("Enter values for a,b,c:");
+    // int a = input.nextInt();
+    // int b = input.nextInt();
+    // int c = input.nextInt();
 
-    // Calculate Discriminat 
-    int d = b * b - 4 * a * c;
+    // // Calculate Discriminat 
+    // int d = b * b - 4 * a * c;
 
-    // Imaginary roots
-    if (d < 0) {
-        System.out.println("Roots are imaginary");
+    // // Imaginary roots
+    // if (d < 0) {
+    //     System.out.println("Roots are imaginary");
         
-    }
-    // One real root
-    else if(d == 0) {
-        double root = -b / (2.0 * a);
-        System.out.printf("Root: %.2f%n", root);
-    }
-    // Two Roots
-    else {
-        double sqrtD = Math.sqrt(d);
+    // }
+    // // One real root
+    // else if(d == 0) {
+    //     double root = -b / (2.0 * a);
+    //     System.out.printf("Root: %.2f%n", root);
+    // }
+    // // Two Roots
+    // else {
+    //     double sqrtD = Math.sqrt(d);
 
-        double root1 = (-b - sqrtD) / (2.0 * a);
-        double root2 = (-b + sqrtD) / (2.0 * a);
+    //     double root1 = (-b - sqrtD) / (2.0 * a);
+    //     double root2 = (-b + sqrtD) / (2.0 * a);
 
-        // Have smaller root first, then larger -> Increasing order
-        double smaller = Math.min(root1,root2);
-        double larger = Math.max(root1,root2);
+    //     // Have smaller root first, then larger -> Increasing order
+    //     double smaller = Math.min(root1,root2);
+    //     double larger = Math.max(root1,root2);
 
-        System.out.printf("Roots: %.2f, %.2f%n", smaller, larger);
-    }
-    input.close();
+    //     System.out.printf("Roots: %.2f, %.2f%n", smaller, larger);
+    // }
+    // input.close();
 
-    }
+    // }
 
 
 
@@ -173,6 +173,71 @@ public class HW2_Again {
     // =================
     // CODE STARTS HERE:
     // =================
+
+    // public static void main(String[] args) {
+
+    //     Scanner input = new Scanner(System.in);
+
+    //     // Variables for sums
+    //     int sumAll = 0;
+    //     int sumPositive = 0;
+    //     int sumNonPositive = 0;
+
+    //     // Counters
+    //     int countPositive = 0;
+    //     int countNonPositive = 0;
+
+    //     // Input
+    //     System.out.print("Enter five whole numbers: ");
+
+    //     for (int i = 0; i < 5; i++) {
+    //         int num = input.nextInt();
+
+    //         // Sum of all numbers
+    //         sumAll += num;
+
+    //         // Check positive vs non-positive
+    //         if (num > 0) {
+    //             sumPositive += num;
+    //             countPositive++;
+    //         } else {
+    //             sumNonPositive += num;
+    //             countNonPositive++;
+    //         }
+    //     }
+
+    //     // Averages
+    //     double avgAll = sumAll / 5.0;
+    //     double avgPositive = (countPositive > 0)
+    //             ? sumPositive / (double) countPositive
+    //             : 0.0;
+    //     double avgNonPositive = (countNonPositive > 0)
+    //             ? sumNonPositive / (double) countNonPositive
+    //             : 0.0;
+
+    //     // Singular or plural text
+    //     String posWord = (countPositive == 1) ? "number" : "numbers";
+    //     String nonPosWord = (countNonPositive == 1) ? "number" : "numbers";
+
+    //     // Output
+    //     System.out.println();
+    //     System.out.println("The sum of the " + countPositive + " positive " + posWord + ": " + sumPositive);
+    //     System.out.println("The sum of the " + countNonPositive + " non-positive " + nonPosWord + ": " + sumNonPositive);
+    //     System.out.println("The sum of the 5 numbers: " + sumAll);
+
+    //     System.out.printf("%nThe average of the %d positive %s: %.2f%n",
+    //             countPositive, posWord, avgPositive);
+    //     System.out.printf("The average of the %d non-positive %s: %.2f%n",
+    //             countNonPositive, nonPosWord, avgNonPositive);
+    //     System.out.printf("The average of the 5 numbers: %.2f%n", avgAll);
+
+    //     input.close();
+    // }
+
+        
+
+        
+    
     
     // ======================================================================================
     
@@ -187,5 +252,24 @@ public class HW2_Again {
     // =================
     // CODE STARTS HERE:
     // =================
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter three numbers: ");
+        double numOne = input.nextDouble();
+        double numTwo = input.nextDouble();
+        double numThree = input.nextDouble();
+
+        // Compute min value
+        double min = Math.min(numOne, Math.min(numTwo, numThree));
+
+        // Output
+        System.out.println("The minimum value is: " + min);
+
+        input.close();
+
+    }
     
 }
